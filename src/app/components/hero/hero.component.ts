@@ -19,7 +19,6 @@ export class HeroComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = this.productsService.get();
-    console.log('products', this.products)
   }
 
   openModal(index: number): void {
