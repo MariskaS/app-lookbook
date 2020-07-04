@@ -1,0 +1,46 @@
+<div class="la-subscribe">
+  <img class="la-subscribe__img" src="assets/img/form_img.jpg">
+  <div class="la-subscribe__form">
+    <h3 class="la-title">{{subscribeContent.title}}</h3>
+    <p class="la-subtitle">{{subscribeContent.subtitle}}</p>
+    <div class="la-form">
+      <form [formGroup]="subscribeForm"
+            (ngSubmit)="onSubmit()">
+        <div class="la-input"
+             [ngClass]="{'la-input--invalid': subscribeForm.get('email').invalid && subscribeForm.get('email').touched}">
+          <input placeholder="{{subscribeContent.email.label}}"
+                 formControlName="email"
+                 type="email">
+          <div *ngIf="subscribeForm.get('email').invalid && subscribeForm.get('email').touched"
+               class="la-input__hint">
+            <ng-container *ngIf="subscribeForm.get('email').errors['required']">
+              {{subscribeContent.email.errorNoEmpty}}
+            </ng-container>
+            <ng-container *ngIf="subscribeForm.get('email').errors['email']">
+              {{subscribeContent.email.errorInvalid}}
+            </ng-container>
+          </div>
+        </div>
+        <div class="la-input"
+             [ngClass]="{'la-input--invalid': subscribeForm.get('zipCode').invalid && subscribeForm.get('zipCode').touched}">
+          <input placeholder="{{subscribeContent.zipCode.label}}"
+                 formControlName="zipCode"
+                 type="text">
+          <div *ngIf="subscribeForm.get('zipCode').invalid && subscribeForm.get('zipCode').touched"
+               class="la-input__hint">
+            <ng-container *ngIf="subscribeForm.get('zipCode').errors['required']">
+              {{subscribeContent.email.errorNoEmpty}}
+            </ng-container>
+          </div>
+        </div>
+        <p class="la-hint">{{subscribeContent.agreeToReceiveNews}}</p>
+        <button app-button
+                theme="buttonLink"
+                type="submit"
+                [disabled]="subscribeForm.invalid || subscribeForm.disabled">
+          {{subscribeContent.button}}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

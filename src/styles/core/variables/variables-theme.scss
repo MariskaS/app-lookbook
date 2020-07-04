@@ -1,0 +1,82 @@
+:root {
+  --color-primary: #e40704;
+  --color-primary-dark: #5c0100;
+
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-gray-light: #eeeef0;
+  --color-gray: #555;
+  --color-gray-dark: #121212;
+
+  /*
+  * Body.
+  */
+  --body-color: var(--color-gray-light);
+  --body-bg: var(--color-black);
+
+  /*
+  * Header.
+   */
+  --header-bg: var(--body-bg);
+
+  /*
+  * Footer.
+  */
+  --footer-bg: var(--body-bg);
+  --footer-socials-action: var(--color-primary);
+
+  /*
+  * Scrollbar.
+  */
+  --scrollbar-bg: var(--color-primary);
+
+  /*
+  * Buttons.
+  */
+  --btn-primary-color: var(--color-gray-light);
+  --btn-primary-border: var(--color-primary);
+  --btn-primary-bg: transparent;
+  --btn-primary-color--action: var(--color-black);
+  --btn-primary-bg--action: var(--color-primary);
+
+  --btn-link-color: var(--color-gray-light);
+  --btn-link-color--action: var(--color-primary);
+
+  /*
+  * Inputs.
+  */
+  --input-bg: transparent;
+  --input-color: var(--color-gray-light);
+  --input-border: var(--color-gray);
+  --input-color-action: var(--color-gray-light);
+  --input-border-action: var(--color-gray-light);
+  --input-border-invalid: var(--color-primary);
+  --input-text-invalid: var(--color-primary);
+
+  /*
+  * Modal.
+  */
+  --modal-bg: var(--color-black);
+  --modal-img-bg: var(--color-gray-dark);
+  --modal-bg-overlay: rgba(0,0,0,.60);
+
+  /*
+  * Form.
+  */
+  --form-title-color: var(--color-gray-light);
+  --form-subtitle-color: var(--color-gray);
+  --form-hint-color: var(--color-gray);
+
+  /*
+  * Radio Button.
+  */
+  --radio-border: var(--color-primary-dark);
+  --radio-bg: var(--color-white);
+  --radio-bg-active: var(--color-primary);
+
+  /*
+  * Custom Focus.
+  */
+  --focus-box: var(--color-primary);
+}

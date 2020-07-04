@@ -1,0 +1,121 @@
+@import "~src/styles/core/mixins/mixin-response-font";
+@import "~src/styles/core/mixins/mixin-flex-variant";
+@import "~src/styles/components/form/input";
+@import "~src/styles/core/mixins/mixin-text-variant";
+
+:host {
+  display: block;
+  position: relative;
+  height: 100vh;
+  background-color: var(--color-gray-dark);
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("~src/assets/img/form_bg.png") no-repeat right;
+    background-size: cover;
+    filter: blur(4px);
+    opacity: 35%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    z-index: $z-index-subscribe-bg;
+  }
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      &:after {
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.la-subscribe {
+  height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: $z-index-subscribe;
+  @include flex-variant(flex, center, center);
+
+  &__form {
+    padding: 0 $space-base;
+  }
+
+  &__img {
+    display: none;
+  }
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      justify-content: start;
+
+      &__form {
+        max-width: $form-subscribe-form-size;
+        position: absolute;
+        right: 0;
+        top: 24%;
+      }
+
+      &__img {
+        display: block;
+        height: auto;
+        max-width: $form-subscribe-img-size;
+      }
+    }
+  }
+}
+
+/*
+* Form.
+*/
+.la-form {
+  display: flex;
+  justify-content: flex-end;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      form {
+        max-width: $form-max-size;
+      }
+    }
+  }
+}
+
+/*
+*Heading.
+*/
+.la-title {
+  font-family: $form-title-font-family;
+  @include response-font($form-title-font-size);
+  color: var(--form-title-color);
+  text-transform: uppercase;
+}
+
+.la-subtitle {
+  @include text-variant(
+      $form-subtitle-spaces,
+      $form-subtitle-font-family,
+      $form-subtitle-font-size,
+      var(--form-subtitle-color)
+  );
+}
+
+.la-hint {
+  @include text-variant(
+      $form-hint-spaces,
+      $form-hint-font-family,
+      $form-hint-font-size,
+      var(--form-hint-color)
+  );
+}
+
+.la-input:not(:first-child) {
+  margin-top: $form-input-spaces;
+}

@@ -1,0 +1,12 @@
+@import "mixin-btn-variant";
+
+:host.ab-btn--secondary {
+  @include btn-variant(
+      var(--btn-secondary-color),
+      var(--btn-secondary-border),
+      var(--btn-secondary-bg),
+      var(--btn-secondary-color--action),
+      var(--btn-secondary-border--action),
+      var(--btn-secondary-bg--action),
+  );
+}

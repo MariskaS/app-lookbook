@@ -1,0 +1,6 @@
+@mixin text-variant($space, $font-family, $font-size, $color) {
+  padding: $space;
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color;
+}

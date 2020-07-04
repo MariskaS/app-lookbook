@@ -1,0 +1,18 @@
+@import '~src/styles/core/mixins/mixin-flex-variant';
+@import '~src/styles/components/head/h3';
+
+:host {
+  height: 100vh;
+  background: url("~src/assets/img/hero_bg.jpg") no-repeat center;
+  background-size: cover;
+  @include flex-variant(flex, center, center);
+
+  // For modal - otherwise, when scrolling the page, the modal may be cropped.
+  position: relative;
+  z-index: $z-index-modal;
+}
+
+// TODO: only for DEMO.
+.la-btn-modal {
+  margin-right: 10%;
+}

@@ -1,0 +1,21 @@
+@import "~src/styles/core/variables/variables";
+
+.ab-list {
+  &__row {
+    display: flex;
+    padding: $space-base;
+
+    &:nth-of-type(odd) {
+      background-color: var(--bg-zebra);
+    }
+  }
+
+  &__label {
+    padding-right: $space-base-half;
+    font-weight: $font-family-bold;
+  }
+
+  &__info {
+    padding: $space-base;
+  }
+}

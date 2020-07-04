@@ -1,0 +1,8 @@
+@import "mixin-btn-link-variant";
+
+:host.la-btn--link {
+  @include btn-link-variant(
+      var(--btn-link-color),
+      var(--btn-link-color--action)
+  )
+}

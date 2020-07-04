@@ -1,0 +1,13 @@
+@import "~src/styles/components/buttons/btn-primary";
+@import "~src/styles/components/buttons/btn-link";
+@import "~src/styles/components/buttons/btn-icon";
+@import "~src/styles/components/buttons/btn-radio";
+
+/**
+* Example of usage:
+* <button app-button>...primary button(By default)...</button>
+*
+* <button app-button theme="..." iconName="...">...</button>
+*
+* <button app-button disabled>...disabled button...</button>
+*/

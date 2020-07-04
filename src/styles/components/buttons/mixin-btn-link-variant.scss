@@ -1,0 +1,31 @@
+@import "~src/styles/core/variables/variables";
+
+@mixin btn-link-variant($color, $color-action) {
+  color: $color;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  user-select: none;
+  background: transparent;
+  font-family: $control-font-family;
+  font-size: $control-font-size;
+  padding: 0;
+
+  &:not(:disabled) {
+    &:active {
+      color: $color-action;
+    }
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: color $transition-base;
+
+        &:hover {
+          color: $color-action;
+        }
+      }
+    }
+  }
+}

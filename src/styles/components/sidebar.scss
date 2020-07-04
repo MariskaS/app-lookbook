@@ -1,0 +1,44 @@
+@import '~src/styles/core/variables/variables';
+
+:host {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  z-index: $z-index-sidebar;
+}
+
+.ab-sidebar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--sidebar-bg);
+  border-left: 1px solid var(--sidebar-border);
+  min-width: $sidebar-width;
+
+  &__head,
+  &__body {
+    padding: $sidebar-spaces;
+  }
+
+  &__head {
+    height: $sidebar-head-height;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--sidebar-border);
+  }
+
+  &__title {
+    font-family: $sidebar-title-font-family;
+    font-size: $sidebar-title-font-size;
+    flex: 1;
+  }
+
+  &__body {
+    flex: 1;
+    overflow-x: auto;
+  }
+
+}

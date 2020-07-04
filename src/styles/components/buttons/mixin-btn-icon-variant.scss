@@ -1,0 +1,10 @@
+@import "~src/styles/core/mixins/mixin-flex-variant";
+@import "~src/styles/core/mixins/mixin-focus-variant";
+
+@mixin btn-icon-variant {
+  cursor: pointer;
+  border: unset;
+  color: currentColor;
+  @include flex-variant(inline-flex, center, center);
+  @include focus-variant;
+}

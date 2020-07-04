@@ -1,0 +1,12 @@
+@import "~src/styles/core/mixins/mixin-flex-variant";
+@import "../../core/mixins/mixin-actions-variant";
+
+:host.la-btn--icon {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: unset;
+  color: currentColor;
+  @include flex-variant(inline-flex, center, center);
+  @include actions-variant;
+}

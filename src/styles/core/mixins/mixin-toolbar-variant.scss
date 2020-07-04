@@ -1,0 +1,33 @@
+@import "mixin-flex-variant";
+
+@mixin toolbar-variant($full-col-align, $flex-all: 'desktop') {
+  > li {
+    padding: $space-small;
+  }
+
+  .ab-nowrap {
+    display: flex;
+    align-items: center;
+  }
+
+  @if $flex-all == 'all' {
+    display: flex;
+    align-items: center;
+
+    .ab-full {
+      flex: 1;
+      @include flex-variant(flex, $full-col-align, center);
+    }
+  } @else {
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+      align-items: center;
+
+      .ab-full {
+        flex: 1;
+        @include flex-variant(flex, $full-col-align, center);
+      }
+    }
+  }
+}

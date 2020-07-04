@@ -1,0 +1,135 @@
+/*
+* Font.
+*/
+$font-family-bold: 'Pragmatica Extended Bold', Arial, sans-serif;
+$font-family-regular: 'Acumin Reg Pro', Arial, sans-serif;
+
+$font-size-largest: 74px;
+$font-size-large: 30px;
+$font-size-medium: 20px;
+$font-size-base: 18px;
+$font-size-small: 14px;
+$font-size-smaller: 12px;
+
+/*
+* Scrollbar.
+*/
+$scrollbar-size: 8px;
+
+/*
+* Body.
+*/
+$body-font-size: $font-size-medium;
+$body-font-family: $font-family-regular;
+
+/*
+* Screens.
+*/
+$screen-sx: 400px;
+$screen-sm: 768px;
+$screen-md: 980px;
+
+/*
+* Spaces.
+*/
+$space-small: 4px;
+$space-base: 14px;
+$space-medium: 20px;
+$space-large: 30px;
+$space-large-double: $space-large*2;
+
+/*
+* Controls (use for button & input).
+*/
+$control-size: 40px;
+$control-spaces: $space-small $space-base;
+$control-font-size: $font-size-base;
+$control-font-family: $font-family-bold;
+
+/*
+* Header.
+*/
+$header-height: 68px;
+$header-spaces: $space-base;
+
+/*
+* Footer.
+*/
+$footer-spaces: $space-base;
+$footer-font-size: $font-size-small;
+$footer-font-family: $font-family-regular;
+$footer-socials-ico-size: 18px;
+$footer-socials-ico-spaces: $space-base;
+
+/*
+* Animation.
+*/
+$transition-base: 270ms ease-in-out;
+
+/*
+* Buttons.
+*/
+$btn-width: 150px;
+
+/*
+* z-index.
+*/
+$z-index-subscribe-bg: 1;
+$z-index-subscribe: 2;
+$z-index-modal: 1000;
+
+/*
+* Form.
+*/
+$form-subscribe-form-size: 600px;
+$form-subscribe-img-size: 590px;
+$form-max-size: 400px;
+
+$form-title-font-size: $font-size-largest;
+$form-title-font-family: $font-family-bold;
+
+$form-subtitle-spaces: $space-large 0 $space-large-double;
+$form-subtitle-font-size: $font-size-base;
+$form-subtitle-font-family: $font-family-regular;
+
+$form-input-spaces: $space-medium;
+
+$form-hint-spaces: $space-medium 0;
+$form-hint-font-size: $font-size-smaller;
+$form-hint-font-family: $font-family-regular;
+
+$form-validate-txt-spaces: $space-small 0 0;
+
+$form-shift-lg: $space-large-double;
+
+/*
+* Modal.
+*/
+$modal-font-size: $font-size-small;
+$modal-body-spaces: 10% $space-large 0;
+$modal-img-spaces: $space-medium;
+$modal-img-width: 360px;
+$modal-height: 400px;
+$modal-width: 800px;
+$modal-footer-spaces: $space-large;
+$modal-head-spaces: $space-large;
+$modal-head-font-size: $font-size-medium;
+$modal-head-font-family: $font-family-bold;
+
+/*
+* Heads.
+*/
+$head-h3-font-size: $font-size-large;
+$head-h3-spaces: $space-large;
+$head-font-family: $font-family-bold;
+
+/*
+* Icons.
+*/
+$ico-size-base: 24px;
+
+/*
+* Radio Button.
+*/
+$radio-border: 10px;
+$radio-size: $control-size;

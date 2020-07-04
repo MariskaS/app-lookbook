@@ -1,0 +1,13 @@
+<footer class="la-footer">
+  <div class="la-footer__socials">
+    <ng-container *ngFor="let social of footerContent.socials">
+      <a [attr.href]="social.link"
+         [attr.title]="social.title"
+         target="_blank">
+        <svg-icon aria-hidden="true"
+                  src="{{social.icon}}"></svg-icon>
+      </a>
+    </ng-container>
+  </div>
+  <p>{{footerContent.copyright}}</p>
+</footer>

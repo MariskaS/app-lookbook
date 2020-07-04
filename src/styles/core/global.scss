@@ -1,0 +1,40 @@
+@import "~src/styles/core/variables/variables";
+@import 'mixins/mixin-text-variant';
+
+::-webkit-scrollbar {
+  width: $scrollbar-size;
+  height: $scrollbar-size;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body {
+  @include text-variant(
+      0,
+      $body-font-family,
+      $body-font-size,
+      var(--body-color)
+  );
+  overflow: hidden;
+  line-height: 1.1;
+  background-color: var(--body-bg);
+  display: flex;
+}
+
+svg {
+  fill: currentColor;
+  height: $ico-size-base;
+  width: $ico-size-base;
+}
+
+[disabled] {
+  opacity: .5;
+  cursor: default;
+  pointer-events: none;
+}

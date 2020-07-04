@@ -1,0 +1,8 @@
+@import "~src/styles/core/variables/variables";
+
+@mixin no-data {
+  font-family: $no-data-font-family;
+  font-size: $no-data-font-size;
+  color: currentColor;
+  padding: $no-data-spaces;
+}

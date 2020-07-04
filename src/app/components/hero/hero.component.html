@@ -1,0 +1,37 @@
+<ng-container *ngFor="let product of products; let index = index">
+  <button app-button
+          class="la-btn-modal"
+          aria-label="To open the dialog"
+          type="button"
+          theme="buttonRadio"
+          [class.is-active]="isOpenIDsModal[index]"
+          (click)="openModal(index)"></button>
+
+  <app-modal *ngIf="isOpenIDsModal[index]">
+    <ng-container modal-header>
+      <span>{{modalContent.title}}</span>
+      <button app-button
+              theme="buttonIcon"
+              aria-label="To close the dialog"
+              type="button"
+              (click)="closeModal(index)"
+              iconName="close"></button>
+    </ng-container>
+    <ng-container modal-body>
+      <h3 class="la-h3"><span>{{product.name}}</span></h3>
+      <p>
+        {{product.description}}
+      </p>
+    </ng-container>
+    <ng-container modal-footer>
+      <button app-button
+              type="submit">
+        {{modalContent.button}}
+      </button>
+    </ng-container>
+    <ng-container modal-img>
+      <img src="{{product.img}}">
+    </ng-container>
+  </app-modal>
+</ng-container>
+

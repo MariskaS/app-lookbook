@@ -1,0 +1,8 @@
+.ab-btn-group {
+  display: flex;
+  margin: -$space-small;
+
+  [class*='ab-btn--'] {
+    margin: $space-small;
+  }
+}

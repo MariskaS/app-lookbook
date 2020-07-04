@@ -1,0 +1,73 @@
+@import "~src/styles/core/variables/variables";
+@import "~src/styles/core/mixins/mixin-focus-variant";
+@import "~src/styles/core/mixins/mixin-flex-variant";
+
+.ab-tab {
+  &__head {
+    &__item {
+      font-family: $font-family-bold;
+      background-color: var(--tab-head-bg);
+      color: currentColor;
+      padding: $tab-spaces;
+      cursor: pointer;
+      border: 0;
+      border-left: $tab-head-border solid var(--tab-head-border);
+      transition: border-color $transition-base;
+      text-transform: capitalize;
+      display: block;
+      width: 100%;
+      text-align: left;
+      @include focus-variant;
+
+      &:active,
+      &:hover {
+        border-color: var(--tab-head-border--active);
+      }
+
+      // For correct :focus on the tab.
+      &:focus {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .is-active {
+      border-color: var(--tab-head-border--active);
+    }
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+
+      &__item {
+        text-align: center;
+        max-width: $tab-head-width;
+        border-left: unset;
+        border-top: $tab-head-border solid var(--tab-head-border);
+      }
+    }
+  }
+
+  &__body {
+    overflow: hidden;
+    overflow-y: auto;
+    @include focus-variant;
+
+    // Stretch container full screen.
+    display: flex;
+    flex: 1;
+  }
+
+  &__toolbar {
+    background-color: var(--tab-head-bg);
+    padding: $tab-spaces;
+  }
+
+  &__wrapper {
+
+    // Stretch container full screen.
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}

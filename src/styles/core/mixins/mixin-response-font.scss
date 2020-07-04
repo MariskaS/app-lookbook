@@ -1,0 +1,11 @@
+@import "~src/styles/core/variables/variables";
+
+@mixin response-font($font-size) {
+  font-size: calc(2rem + 3.3vw);
+
+  @media (min-width: $screen-md) {
+    & {
+      font-size: $font-size;
+    }
+  }
+}

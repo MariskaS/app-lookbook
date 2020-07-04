@@ -1,0 +1,45 @@
+@import "~src/styles/core/variables/variables";
+@import "~src/styles/core/mixins/mixin-flex-variant";
+@import '~src/styles/core/mixins/mixin-actions-variant';
+
+@mixin btn-variant($color, $border, $background, $background-action, $color-action) {
+  min-height: $control-size;
+  padding: $control-spaces;
+  font-family: $control-font-family;
+  font-size: $control-font-size;
+  min-width: $btn-width;
+  color: $color;
+  border: 1px solid $border;
+  background: $background;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  user-select: none;
+  @include flex-variant(inline-flex, center, center);
+  @include actions-variant;
+
+  &:not(:disabled) {
+    &:active {
+      color: $color-action;
+      background: $background-action;
+    }
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: color $transition-base, background $transition-base;
+
+        &:hover {
+          color: $color-action;
+          background: $background-action;
+        }
+      }
+    }
+  }
+
+
+  &:disabled {
+    opacity: .6;
+    cursor: default;
+  }
+}

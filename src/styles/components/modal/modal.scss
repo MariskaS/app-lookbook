@@ -1,0 +1,91 @@
+@import "~src/styles/core/variables/variables";
+@import "~src/styles/core/mixins/mixin-flex-variant";
+
+:host {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include flex-variant(flex, center, center);
+  background-color: var(--modal-bg-overlay);
+}
+
+.la-modal {
+  background-color: var(--modal-bg);
+  z-index: $z-index-modal;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      display: flex;
+      max-height: $modal-height;
+      max-width: $modal-width;
+    }
+  }
+
+  &__img {
+    @include flex-variant(flex, center, center);
+    background-color: var(--modal-img-bg);
+    padding: $modal-img-spaces;
+    width: 100%;
+
+    ::ng-deep img {
+      width: 100%;
+      height: auto;
+      max-width: $modal-img-width;
+    }
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sm) {
+      & {
+        order: 1;
+        width: $modal-img-width;
+      }
+    }
+  }
+
+  &__content {
+    @include flex-variant(flex, center, center);
+    flex-direction: column;
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      & {
+        order: 2;
+        flex: 1;
+      }
+    }
+  }
+
+  &__header,
+  &__body,
+  &__footer {
+    width: 100%;
+  }
+
+  &__header {
+    @include flex-variant(flex, center, center);
+    padding: $modal-head-spaces;
+    font-size: $modal-head-font-size;
+    font-family: $modal-head-font-family;
+    text-transform: uppercase;
+
+    ::ng-deep span {
+      flex: 1;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    font-size: $modal-font-size;
+    padding: $modal-body-spaces;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    padding: $modal-footer-spaces;
+  }
+}

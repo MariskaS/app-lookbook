@@ -1,0 +1,18 @@
+@import '~src/styles/core/variables/variables';
+
+@mixin actions-variant($actions: 'notAll') {
+  @if $actions == 'all' {
+    transition: box-shadow $transition-base;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      box-shadow: 0 0 10px var(--focus-box);
+    }
+  } @else {
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px var(--focus-box);
+    }
+  }
+}

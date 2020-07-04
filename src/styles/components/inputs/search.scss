@@ -1,0 +1,19 @@
+@import "~src/styles/core/mixins/mixin-flex-variant";
+@import "mixin-input-variant";
+
+.ab-search {
+  @include flex-variant(inline-flex, center, center);
+  @include input-variant(
+      $search-height,
+      100%,
+      var(--input-color),
+      var(--input-border),
+      var(--input-bg),
+      var(--input-border--action),
+      $search-spaces
+  );
+
+  &__ico {
+    padding-left: $search-icon-spaces;
+  }
+}

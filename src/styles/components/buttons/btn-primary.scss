@@ -1,0 +1,11 @@
+@import "mixin-btn-variant";
+
+:host.la-btn--primary {
+  @include btn-variant(
+      var(--btn-primary-color),
+      var(--btn-primary-border),
+      var(--btn-primary-bg),
+      var(--btn-primary-bg--action),
+      var(--btn-primary-color--action)
+  );
+}

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Proxima Extra Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('~src/assets/fonts/ProximaNovaExtraCondensedBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Proxima Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('~src/assets/fonts/ProximaNovaCondensedBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Proxima Reg';
+  font-style: normal;
+  font-weight: normal;
+  src: url('~src/assets/fonts/ProximaNovaCondensedRegular.woff2') format('woff2');
+}
+
+@import "~src/styles/core/core";

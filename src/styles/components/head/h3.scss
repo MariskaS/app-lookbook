@@ -1,0 +1,17 @@
+@import '~src/styles/core/variables/variables';
+
+.la-h3 {
+  font-size: $head-h3-font-size;
+  font-family: $head-font-family;
+  padding-bottom: $head-h3-spaces;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  span {
+    letter-spacing: 1px;
+    background-image: linear-gradient(red 0%, red 100%);
+    background-repeat: repeat-x;
+    background-position: 0 85%;
+    background-size: 1px 30%;
+  }
+}
