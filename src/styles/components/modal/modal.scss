@@ -11,11 +11,11 @@
   bottom: 0;
   @include flex-variant(flex, center, center);
   background-color: var(--modal-bg-overlay);
+  z-index: $z-index-modal;
 }
 
 .la-modal {
   background-color: var(--modal-bg);
-  z-index: $z-index-modal;
 
   // For Desktop & Tablet.
   @media (min-width: $screen-sm) {

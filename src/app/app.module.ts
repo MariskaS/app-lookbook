@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
 
-import {AngularSvgIconModule} from "angular-svg-icon";
+import {AngularSvgIconModule} from 'angular-svg-icon';
+import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 
 import {AppComponent} from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -28,6 +29,7 @@ import {FooterComponent} from './components/footer/footer.component';
     ReactiveFormsModule,
     HttpClientModule,
     AngularSvgIconModule.forRoot(),
+    ScrollToModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

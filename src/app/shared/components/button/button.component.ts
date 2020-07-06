@@ -12,7 +12,7 @@ import {Component, HostBinding, Input} from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input() theme: 'primary' | 'buttonIcon' | 'buttonLink' | 'buttonRadio' = 'primary';
+  @Input() theme: 'primary' | 'buttonIcon' | 'buttonLink' | 'buttonRadio' | 'scroll' = 'primary';
   @Input() iconName = '';
 
   @HostBinding('class.la-btn--primary')
@@ -33,5 +33,10 @@ export class ButtonComponent {
   @HostBinding('class.la-btn--radio')
   get isRadio(): boolean {
     return this.theme === 'buttonRadio';
+  }
+
+  @HostBinding('class.la-btn--scroll')
+  get isAnimate(): boolean {
+    return this.theme === 'scroll';
   }
 }

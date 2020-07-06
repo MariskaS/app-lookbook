@@ -1,0 +1,36 @@
+@import '~src/styles/core/variables/variables';
+
+:host.la-btn--scroll {
+  min-width: $btn-scroll-size;
+  min-height: $btn-scroll-size;
+  background: var(--btn-scroll-bg);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid var(--btn-scroll-border);
+  transition: all $transition-base;
+  outline: none;
+  user-select: none;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  margin-left: -#{$btn-scroll-size};
+  z-index: $z-index-scroll-btn;
+
+  svg {
+    fill: var(--btn-scroll-ico-color);
+    height: $btn-scroll-ico-size;
+    width: $btn-scroll-ico-size;
+    transform: rotate(90deg);
+  }
+
+  .is-active,
+  &:hover,
+  &:focus {
+    transform: translateY(-6px);
+    border-color: var(--btn-scroll-border-action);
+
+    svg {
+      fill: var(--btn-scroll-ico-color-action);
+    }
+  }
+}

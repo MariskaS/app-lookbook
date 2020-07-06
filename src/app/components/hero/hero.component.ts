@@ -21,13 +21,17 @@ export class HeroComponent implements OnInit {
     this.products = this.productsService.get();
   }
 
-  openModal(index: number): void {
+  public openModal(index: number): void {
     this.isOpenIDsModal = this.products.map(product => false);
     this.isOpenIDsModal[index] = true;
   }
 
-  closeModal(index: number): void {
+  public closeModal(index: number): void {
     this.isOpenIDsModal[index] = false;
   }
 
+  public toggleDestination() {
+    const element = document.querySelector("#goToSubscribe")
+    if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
